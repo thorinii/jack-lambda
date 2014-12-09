@@ -38,6 +38,7 @@ import com.android.jack.ifstatement.IfstatementTests;
 import com.android.jack.init.InitTests;
 import com.android.jack.inner.InnerTests;
 import com.android.jack.invoke.InvokeTests;
+import com.android.jack.lambda.LambdaTests;
 import com.android.jack.newarray.NewarrayTests;
 import com.android.jack.opcodes.OpcodesTests;
 import com.android.jack.optimizations.exprsimplifier.ExprsimplifierTests;
@@ -107,6 +108,7 @@ public class RegressionTests {
       new TypeTests(),
       new UnaryTests(),
       new VerifyTests(),
+      new LambdaTests()
   };
 
   @BeforeClass

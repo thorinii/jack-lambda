@@ -323,7 +323,7 @@
     <!-- compile -->
     <javac
       destdir="${jack-tests.build.outdir}"
-      source="1.5" target="1.5"
+      source="1.8" target="1.8"
       debug="true" includeantruntime="false">
       <src path="${jack-tests.dir}/src"/>
       <src path="${jack-tests.dir}/tests"/>

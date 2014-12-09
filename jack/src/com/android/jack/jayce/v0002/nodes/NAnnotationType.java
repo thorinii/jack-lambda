@@ -147,7 +147,7 @@ public class NAnnotationType extends NInterfaceType {
   @Override
   public void readContent(@Nonnull JayceInternalReaderImpl in) throws IOException {
     level = in.getNodeLevel();
-    retentionPolicy = in.readRetentionPolicyEnum();
+    retentionPolicy = in.<JRetentionPolicy>readRetentionPolicyEnum();
     modifiers = in.readInt();
     signature = in.readId();
     superInterfaces = in.readIds();

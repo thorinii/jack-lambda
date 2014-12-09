@@ -93,7 +93,7 @@ public class NAnnotationLiteral extends NLiteral {
 
   @Override
   public void readContent(@Nonnull JayceInternalReaderImpl in) throws IOException {
-    retentionPolicy = in.readRetentionPolicyEnum();
+    retentionPolicy = in.<JRetentionPolicy>readRetentionPolicyEnum();
     annotationType = in.readId();
     elements = in.readNodes(NNameValuePair.class);
   }

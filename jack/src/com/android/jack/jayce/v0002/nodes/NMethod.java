@@ -180,7 +180,7 @@ public class NMethod extends NNode implements HasSourceInfo, MethodNode {
     name = in.readId();
     returnType = in.readId();
     parameters = in.readNodes(NParameter.class);
-    methodKind = in.readMethodKindEnum();
+    methodKind = in.<MethodKind>readMethodKindEnum();
     modifier = in.readInt();
     annotations = in.readNodes(NAnnotationLiteral.class);
     body = in.readNode(NAbstractMethodBody.class);

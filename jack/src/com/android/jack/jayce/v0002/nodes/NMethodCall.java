@@ -160,13 +160,13 @@ public class NMethodCall extends NExpression {
   public void readContent(@Nonnull JayceInternalReaderImpl in) throws IOException {
     instance = in.readNode(NExpression.class);
     receiverType = in.readId();
-    receiverKind = in.readReceiverKindEnum();
+    receiverKind = in.<ReceiverKind>readReceiverKindEnum();
     methodName = in.readId();
     methodArgsType = in.readIds();
-    methodKind = in.readMethodKindEnum();
+    methodKind = in.<MethodKind>readMethodKindEnum();
     returnType = in.readId();
     args = in.readNodes(NExpression.class);
-    dispatchKind = in.readDispatchKindEnum();
+    dispatchKind = in.<DispatchKind>readDispatchKindEnum();
   }
 
   @Override

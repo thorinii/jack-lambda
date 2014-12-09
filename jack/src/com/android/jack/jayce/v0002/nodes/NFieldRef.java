@@ -104,7 +104,7 @@ public class NFieldRef extends NExpression {
     field = in.readId();
     fieldType = in.readId();
     receiverType = in.readId();
-    kind = in.readFieldRefKindEnum();
+    kind = in.<FieldKind>readFieldRefKindEnum();
     instance = in.readNode(NExpression.class);
   }
 
