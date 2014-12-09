@@ -96,7 +96,8 @@ public class Options {
 
   @Nonnull
   public static final JavaVersionPropertyId JAVA_SOURCE_VERSION = JavaVersionPropertyId
-      .create("jack.java.source.version", "Java source version").addDefaultValue("1.7")
+          // TODO: keep this at 1.7
+      .create("jack.java.source.version", "Java source version").addDefaultValue("1.8")
       .withCategory(Arzon.get());
 
   @Nonnull

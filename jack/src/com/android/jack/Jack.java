@@ -745,7 +745,6 @@ public abstract class Jack {
     }
 
     if (ecjArguments != null) {
-
       JackBatchCompiler jbc = new JackBatchCompiler(session);
 
       Event event = tracer.start(JackEventType.ECJ_COMPILATION);
