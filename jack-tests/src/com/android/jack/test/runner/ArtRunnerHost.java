@@ -43,6 +43,7 @@ public class ArtRunnerHost extends HostRunner {
     List<String> args = new ArrayList<String>();
 
     args.add(rtEnvironmentRootDir.getAbsolutePath() + "/bin/art");
+    args.add("-Xbootclasspath:" + rtEnvironmentRootDir.getParentFile().getAbsolutePath() + "/common/obj/JAVA_LIBRARIES/core-libart-hostdex_intermediates/classes.dex");
 
     for (String option : options) {
       args.add(option);
